@@ -33,14 +33,14 @@ def setup_driver() -> WebDriver:
     chrome_options.add_experimental_option('useAutomationExtension', False)
 
     # Suppress DevTools listening messages
-    original_stdout = sys.stdout
-    sys.stdout = open(os.devnull, 'w')
+    #original_stdout = sys.stdout
+    #sys.stdout = open(os.devnull, 'w')
 
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     # Restore stdout
-    sys.stdout = original_stdout
+    #sys.stdout = original_stdout
     return driver
 
 
@@ -89,7 +89,6 @@ def get_information_from_chrome_search(vessel_name: str) -> Optional[str]:
                         });
                     """
         })
-        sys.stdout = sys.__stdout__
 
         search_vessel(driver, vessel_name)
         top_result = find_top_result(driver, class_names)
