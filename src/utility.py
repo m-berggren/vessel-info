@@ -34,7 +34,8 @@ def find_regex_matches_for_mmsi(html: str) -> list:
 
 def find_regex_matches_for_callsign(html: str) -> list:
 
-    callsign_us_regex = r"[Cc]all\s*[Ss]ign[</em>),\s:]*([A-Z0-9]+(?<![\.]))"
+    #callsign_us_regex = r"[Cc]all\s*[Ss]ign[</em>),\s:]*([A-Z0-9]+(?<![\.]))"
+    callsign_us_regex = r"[Cc]all\s*[Ss]ign[</em>),\s:]*([A-Z0-9]*[A-Z][A-Z0-9]*)(?=Gross|[.,\s]|$)"
     callsign_se_regex = r"[Aa]nropssignal[),\s:]*([A-Z0-9]+(?<![\.]))"
     callsign_fr_regex = r"[Ii]ndicatif\s*[Dd]'[Aa]ppel[),\s:]*([A-Z0-9]+(?<![\.]))"
 

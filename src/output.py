@@ -28,10 +28,15 @@ def init_program(vessel_count: str) -> Optional[str]:
 
 
 def print_dict_info(vessel: str, d1: dict, d2: dict, d3: dict) -> None:
+
+    imo = dict(d1) if d1 else {}
+    mmsi = dict(d2) if d2 else {}
+    callsign = dict(d3) if d3 else {}
+
     print(f"{format_line(f'Number of tags found for {vessel.upper()}:')}")
-    print(f"{format_line(f'''{'IMO':9}''', f'{dict(d1)}')}")
-    print(f"{format_line(f'''{'MMSI':9}''', f'{dict(d2)}')}")
-    print(f"{format_line(f'''{'CALLSIGN':9}''', f'{dict(d3)}')}")
+    print(f"{format_line(f'''{'IMO':9}''', f'{imo}')}")
+    print(f"{format_line(f'''{'MMSI':9}''', f'{mmsi}')}")
+    print(f"{format_line(f'''{'CALLSIGN':9}''', f'{callsign}')}")
     print(format_line(''))
 
 
