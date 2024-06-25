@@ -10,18 +10,18 @@ def format_line(label: str, value: str | int = None) -> str:
 
 
 def init_program(vessel_count: str) -> Optional[str]:
-    print(f"{'            CREATE VESSEL IN DATABASE'}\n"
+    print(f"{'       CREATE VESSEL IN DATABASE'}\n"
           f"\n"
-          f"Type the name of the vessel you wish to add to the database.'\n"
+          f"Type the name of the vessel you wish to add to the database.\n"
           f"Upper or lower case letters does not matter.\n"
           f"There are currently {vessel_count} vessels stored.\n"
           )
 
-    vessel_name = input(f'Type the name below (or exit with Enter):\n')
+    vessel_name = input(f'Type the name below (or exit with Enter):\n\n')
     if not vessel_name:
         return
 
-    print('\nPlease wait a few seconds while gathering information...\n')
+    print('\nPlease wait while gathering information...\n')
     return vessel_name
 
 
