@@ -37,9 +37,9 @@ def print_final_info(vessel: str, imo: int, mmsi: int, callsign: str) -> None:
 
 def print_incomplete_info(vessel: str, imo: int, mmsi: int, callsign: str) -> None:
     print(f"{format_line(f'{vessel} not created, information missing')}\n"
-          f"{format_line(f'''{'VESSEL':9}''', vessel if vessel else "N/A")}\n"
-          f"{format_line(f'''{'IMO':9}''', imo if imo else "-")}\n"
-          f"{format_line(f'''{'MMSI':9}''', mmsi if mmsi else "-")}\n"
-          f"{format_line(f'''{'CALLSIGN':9}''', callsign if callsign else "-")}\n"
+          f"{format_line(f'''{'VESSEL':9}''', vessel if vessel else 'N/A')}\n"
+          f"{format_line(f'''{'IMO':9}''', imo if imo else '-')}\n"
+          f"{format_line(f'''{'MMSI':9}''', mmsi if mmsi else '-')}\n"
+          f"{format_line(f'''{'CALLSIGN':9}''', callsign if callsign else '-')}\n"
           f"\n"
           f'APPLICATION IS FINISHED.\n')
