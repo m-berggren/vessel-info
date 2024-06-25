@@ -8,6 +8,11 @@ def create_connection() -> Connection:
 
 
 def create_vessel_in_database(data: tuple) -> Optional[str]:
+    """
+    Creates or updates vessel in database.
+    :param data: (imo, vessel, callsign, mmsi)
+    :return: "OK" | None
+    """
     # Creates or updates vessel in database
     conn = create_connection()
     cursor = conn.cursor()
